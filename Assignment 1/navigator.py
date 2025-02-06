@@ -1,36 +1,3 @@
-# from maze import *
-# from exception import *
-# from stack import *
-# class PacMan:
-#     def __init__(self, grid : Maze) -> None:
-#         ## DO NOT MODIFY THIS FUNCTION
-#         self.navigator_maze = grid.grid_representation
-#     def find_path(self, start, end):
-#         # IMPLEMENT FUNCTION HERE
-#         rows=len(self.navigator_maze)
-#         cols=len(self.navigator_maze[0])
-#         paths=Stack()
-#         paths.push([start])
-#         visited_cell=[]
-#         if self.navigator_maze[start[0]][start[1]]==1 or self.navigator_maze[end[0]][end[1]]==1:
-#             raise PathNotFoundException 
-#         while paths.len():
-           
-#             path=paths.pop()
-#             (x,y)=path[-1]
-#             visited_cell.append((x,y))
-#             has_way=False
-#             if (x,y)==end:
-#                 return path
-                
-#             for change_in_x,change_in_y in [(0,1),(1,0),(-1,0),(0,-1)]:
-#                 new_x,new_y=x+change_in_x,y+change_in_y
-#                 if 0<=new_x<rows and 0<=new_y<cols and (new_x,new_y) not in visited_cell and self.navigator_maze[new_x][new_y]==0:
-#                     paths.push((path+[(new_x,new_y)]))
-#                     has_way=True
-#             if not has_way:
-#                 continue        
-#         raise PathNotFoundException
 from stack import Stack
 from exception import PathNotFoundException
 from maze import *
@@ -82,6 +49,40 @@ class PacMan:
         
         # If no path is found
         raise PathNotFoundException
+# from maze import *
+# from exception import *
+# from stack import *
+# class PacMan:
+#     def __init__(self, grid : Maze) -> None:
+#         ## DO NOT MODIFY THIS FUNCTION
+#         self.navigator_maze = grid.grid_representation
+#     def find_path(self, start, end):
+#         # IMPLEMENT FUNCTION HERE
+#         rows=len(self.navigator_maze)
+#         cols=len(self.navigator_maze[0])
+#         paths=Stack()
+#         paths.push([start])
+#         visited_cell=[]
+#         if self.navigator_maze[start[0]][start[1]]==1 or self.navigator_maze[end[0]][end[1]]==1:
+#             raise PathNotFoundException 
+#         while paths.len():
+           
+#             path=paths.pop()
+#             (x,y)=path[-1]
+#             visited_cell.append((x,y))
+#             has_way=False
+#             if (x,y)==end:
+#                 return path
+                
+#             for change_in_x,change_in_y in [(0,1),(1,0),(-1,0),(0,-1)]:
+#                 new_x,new_y=x+change_in_x,y+change_in_y
+#                 if 0<=new_x<rows and 0<=new_y<cols and (new_x,new_y) not in visited_cell and self.navigator_maze[new_x][new_y]==0:
+#                     paths.push((path+[(new_x,new_y)]))
+#                     has_way=True
+#             if not has_way:
+#                 continue        
+#         raise PathNotFoundException
+
 # from maze import *
 # from exception import *
 # from stack import *
